@@ -18,6 +18,7 @@ public class PlayerDto {
 	private int jersey_number;
 	
 	@NotEmpty
+	@Pattern(regexp = "Batsman|Bowler|All-Rounder|Wicket-Keeper")
 	private String role;
 	
 	@NotNull
