@@ -12,4 +12,5 @@ public interface IPlayerService {
 	public Player getPlayerById(int id)throws PlayerNotFoundException;;
 	public String updatePlayerById(int id, PlayerDto dto);
 	public String deletePlayerById(int id);
+	public List<Player>findPlayersByMinAndMaxmatches(int min,int max);
 }

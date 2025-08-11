@@ -18,13 +18,13 @@ public class PlayerDto {
 	private int jersey_number;
 	
 	@NotEmpty
-	@Pattern(regexp = "Batsman|Bowler|All-Rounder|Wicket-Keeper")
+	@Pattern(regexp = "Batsman|Bowler|All-Rounder|Wicket-Keeper",message="Role is invalid")
 	private String role;
 	
-	@NotNull
+	@NotNull(message="Total number of matches is required")
 	private int total_matches;
 	
-	@NotEmpty
+	@NotEmpty(message="Team name is required")
 	private String team_name;
 	
 	@Pattern(regexp = "^[A-Z].*[a-z]$")

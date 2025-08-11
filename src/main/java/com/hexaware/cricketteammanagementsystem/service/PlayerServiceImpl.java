@@ -67,4 +67,9 @@ public class PlayerServiceImpl implements IPlayerService {
 		return "Player updated successfully. ";
 	}
 
+	@Override
+	public List<Player> findPlayersByMinAndMaxmatches(int min, int max) {
+		return repo.findPlayersByMinAndMaxmatches(min, max);
+	}
+
 }

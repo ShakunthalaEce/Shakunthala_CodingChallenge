@@ -17,6 +17,8 @@ import com.hexaware.cricketteammanagementsystem.entity.Player;
 import com.hexaware.cricketteammanagementsystem.exception.PlayerNotFoundException;
 import com.hexaware.cricketteammanagementsystem.service.IPlayerService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/api")
 public class PlayerController {
@@ -31,7 +33,7 @@ public class PlayerController {
 	}
 	
 	@PostMapping("/players")
-	public Player addPlayer(@RequestBody PlayerDto playerDto)
+	public Player addPlayer(@RequestBody @Valid PlayerDto playerDto)
 	{
 		return service.addPlayer(playerDto);
 	}
@@ -54,5 +56,8 @@ public class PlayerController {
 		return service.deletePlayerById(id);
 	}
 	
-	
+	@GetMapping("/players/getPlayersbetween/{min}/{max}")
+	public List<Player>getPlayersMatchesBetween(@PathVariable int min,@PathVariable int max){
+		return service.findPlayersByMinAndMaxmatches(min, max);
+	}
 }
