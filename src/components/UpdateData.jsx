@@ -101,6 +101,7 @@ function UpdateData() {
             type="number"
             className="form-control"
             placeholder="Total Matches"
+            required
             value={total_matches}
             onChange={(e) => setTotalMatches(e.target.value)}
           />
@@ -112,6 +113,7 @@ function UpdateData() {
             className="form-control"
             placeholder="Team Name"
             value={team_name}
+            required
             onChange={(e) => setTeamName(e.target.value)}
           />
         </div>
@@ -122,6 +124,7 @@ function UpdateData() {
             className="form-control"
             placeholder="Country"
             value={country}
+            required
             onChange={(e) => setCountry(e.target.value)}
           />
         </div>
@@ -133,6 +136,7 @@ function UpdateData() {
             placeholder="Description"
             value={description}
             onChange={(e) => setDesciption(e.target.value)}
+            required
           />
         </div>
 
