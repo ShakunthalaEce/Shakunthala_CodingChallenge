@@ -55,6 +55,7 @@ function PostData() {
             className="form-control"
             placeholder="Player ID"
             value={player_id}
+            required
             onChange={(e) => setPlayerId(e.target.value)}
           />
         </div>
@@ -65,6 +66,7 @@ function PostData() {
             className="form-control"
             placeholder="Player Name"
             value={player_name}
+            required
             onChange={(e) => setPlayerName(e.target.value)}
           />
         </div>
@@ -75,6 +77,7 @@ function PostData() {
             className="form-control"
             placeholder="Jersey Number"
             value={jersey_number}
+            required
             onChange={(e) => setJerseyNumber(e.target.value)}
           />
         </div>
@@ -84,6 +87,7 @@ function PostData() {
             name="role"
             value={role}
             id="role"
+            required
             className="form-select"
             onChange={(e) => setRole(e.target.value)}
           >
@@ -101,6 +105,7 @@ function PostData() {
             className="form-control"
             placeholder="Total Matches"
             value={total_matches}
+            required
             onChange={(e) => setTotalMatches(e.target.value)}
           />
         </div>
@@ -111,6 +116,7 @@ function PostData() {
             className="form-control"
             placeholder="Team Name"
             value={team_name}
+            required
             onChange={(e) => setTeamName(e.target.value)}
           />
         </div>
@@ -121,6 +127,7 @@ function PostData() {
             className="form-control"
             placeholder="Country"
             value={country}
+            required
             onChange={(e) => setCountry(e.target.value)}
           />
         </div>
@@ -131,6 +138,7 @@ function PostData() {
             className="form-control"
             placeholder="Description"
             value={description}
+            required
             onChange={(e) => setDesciption(e.target.value)}
           />
         </div>

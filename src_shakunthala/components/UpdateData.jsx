@@ -66,6 +66,7 @@ function UpdateData() {
             className="form-control"
             placeholder="Player Name"
             value={player_name}
+            required
             onChange={(e) => setPlayerName(e.target.value)}
           />
         </div>
@@ -76,6 +77,7 @@ function UpdateData() {
             className="form-control"
             placeholder="Jersey Number"
             value={jersey_number}
+            required
             onChange={(e) => setJerseyNumber(e.target.value)}
           />
         </div>
@@ -86,6 +88,7 @@ function UpdateData() {
             value={role}
             id="role"
             className="form-select"
+            required
             onChange={(e) => setRole(e.target.value)}
           >
             <option value="">Choose a role</option>
